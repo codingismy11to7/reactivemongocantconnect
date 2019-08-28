@@ -62,20 +62,33 @@ sucessfully inserted, retrying
 Failed! will continue to retry
 
 reactivemongo.core.actors.Exceptions$PrimaryUnavailableException: MongoError['No primary node is available! (Supervisor-1/Connection-1)']
-	at reactivemongotest.Query$.run(TestApp.scala:51)
+	at reactivemongotest.Query$.dbF$1(TestApp.scala:51)
 	at reactivemongo.api.MongoConnection.database(MongoConnection.scala:90)
 Caused by: reactivemongo.core.actors.Exceptions$InternalState: 
-	at reactivemongo.ChannelConnected(d1cb22d8, {{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:406947098776342>)
-	at reactivemongo.Start({{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:406947074106351>)
+	at reactivemongo.ChannelConnected(8a2cf3f2, {{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430206800402536>)
+	at reactivemongo.Start({{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430206776717669>)
+16:38:36.747 [reactivemongo-akka.actor.default-dispatcher-5] WARN reactivemongo.api.MongoConnection - [Supervisor-1/Connection-1] Timeout after 8200 milliseconds while probing the connection monitor: IsPrimaryAvailable#252277567?
 
 Failed! will continue to retry
 
 reactivemongo.core.actors.Exceptions$PrimaryUnavailableException: MongoError['No primary node is available! (Supervisor-1/Connection-1)']
-	at reactivemongotest.Query$.run(TestApp.scala:51)
+	at reactivemongotest.Query$.dbF$1(TestApp.scala:51)
 	at reactivemongo.api.MongoConnection.database(MongoConnection.scala:90)
 Caused by: reactivemongo.core.actors.Exceptions$InternalState: 
-	at reactivemongo.ChannelConnected(d1cb22d8, {{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:406947098776342>)
-	at reactivemongo.Start({{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:406947074106351>)
+	at reactivemongo.ChannelConnected(0044e94b, {{NodeSet None Node[localhost:27017: Unknown (9/9/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216806482548>)
+	at reactivemongo.ChannelConnected(bb5e8435, {{NodeSet None Node[localhost:27017: Unknown (8/8/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216805993747>)
+	at reactivemongo.ChannelConnected(a6de23a7, {{NodeSet None Node[localhost:27017: Unknown (7/7/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216805468788>)
+	at reactivemongo.ChannelConnected(f75bde2c, {{NodeSet None Node[localhost:27017: Unknown (6/6/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216804988739>)
+	at reactivemongo.ChannelConnected(f6203e22, {{NodeSet None Node[localhost:27017: Unknown (5/5/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216804493386>)
+	at reactivemongo.ChannelConnected(b7b04123, {{NodeSet None Node[localhost:27017: Unknown (4/4/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216803925691>)
+	at reactivemongo.ChannelConnected(9d6e7ceb, {{NodeSet None Node[localhost:27017: Unknown (3/3/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216803484263>)
+	at reactivemongo.ChannelConnected(18721078, {{NodeSet None Node[localhost:27017: Unknown (2/2/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216802946840>)
+	at reactivemongo.ChannelConnected(4568a3da, {{NodeSet None Node[localhost:27017: Unknown (1/1/10 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216802394205>)
+	at reactivemongo.ConnectAll({{NodeSet None Node[localhost:27017: Unknown (1/1/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216801564036>)
+	at reactivemongo.RefreshAll({{NodeSet None Node[localhost:27017: Unknown (1/1/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430216792364735>)
+	at reactivemongo.ChannelConnected(8a2cf3f2, {{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430206800402536>)
+	at reactivemongo.Start({{NodeSet None Node[localhost:27017: Unknown (0/0/1 available connections), latency=9223372036854775807ns, authenticated={}] }})(<time:430206776717669>)
+16:38:45.969 [reactivemongo-akka.actor.default-dispatcher-6] WARN reactivemongo.api.MongoConnection - [Supervisor-1/Connection-1] Timeout after 8200 milliseconds while probing the connection monitor: IsPrimaryAvailable#664070838?
 
 Failed! will continue to retry
 ...

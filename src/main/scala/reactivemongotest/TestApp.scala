@@ -48,7 +48,7 @@ object Query {
     val uri = MongoConnection.parseURI("mongodb://localhost:27017").fold(throw _, identity)
     val driver = MongoDriver(config)
     val conn = driver.connection(uri, strictUri = true).fold(throw _, identity)
-    val dbF = conn.database("testreactivemongo")
+    def dbF = conn.database("testreactivemongo")
     @tailrec
     def insert(): Unit = {
       val resultF = dbF flatMap { db =>
