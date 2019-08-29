@@ -1,0 +1,31 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%boldYellow(%d{HH:mm:ss.SSS}) %magenta([%15.15thread]) %highlight(%-5level) %green([%30.-30logger{30}]) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>debugoutput.log</file>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+<!--
+    <logger name="reactivemongo" level="debug" additivity="false">
+        <appender-ref ref="FILE" />
+    </logger>
+-->
+
+<!--    <logger name="reactivemongo.core.actors.MongoDBSystem" level="debug" />-->
+<!--
+    <logger name="reactivemongo.io.netty" level="info" />
+    <logger name="reactivemongo.core.netty" level="info" />
+-->
+
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
